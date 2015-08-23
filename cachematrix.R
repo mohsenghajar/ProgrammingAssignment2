@@ -33,7 +33,10 @@ getinv <- function() {
 ## This is the caller function -- determines if a matrix calculation is truly
 ## needed or data is already available in the cache
 
-cacheSolve <- function(x, ...) {
+## USAGE: cacheSolve(get) -- this is to make sure the same matrix x is
+## our input
+
+cacheSolve <- function(x) {
         ## Return a matrix that is the inverse of 'x'
   inv <- getinv()
   if(!is.null(inv)) {
